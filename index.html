@@ -28,10 +28,14 @@
     <header class="site-header">
       <nav class="nav">
         <a class="logo" href="#top">EN</a>
-        <div class="nav-links">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          Menu
+        </button>
+        <div class="nav-links" id="nav-links">
           <a href="#about">About</a>
           <a href="#focus">Focus</a>
           <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
           <a href="#tools">Tools</a>
           <a href="#certs">Certifications</a>
           <a href="#contact">Contact</a>
@@ -158,14 +162,141 @@
         </div>
       </section>
 
+      <!-- Methodology -->
+      <section id="methodology" class="section reveal">
+        <div class="section-title">
+          <h2>Methodology</h2>
+          <p>Recon, validate, and report with disciplined execution.</p>
+        </div>
+        <div class="methodology-grid">
+          <article class="methodology-card">
+            <h3>Recon</h3>
+            <p>Map scope, enumerate assets, and collect signals safely.</p>
+          </article>
+          <article class="methodology-card">
+            <h3>Validate</h3>
+            <p>Confirm findings with repeatable checks and minimal risk.</p>
+          </article>
+          <article class="methodology-card">
+            <h3>Report</h3>
+            <p>Deliver clear impact narratives and actionable remediation.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Skills matrix -->
+      <section id="skills" class="section reveal">
+        <div class="section-title">
+          <h2>Capability matrix</h2>
+          <p>Depth across security, automation, and delivery.</p>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-card">
+            <div>
+              <h3>Security analysis</h3>
+              <p>Scanning, risk notes, and remediation guidance.</p>
+            </div>
+            <div class="skill-meter" aria-label="Level 4 out of 5">
+              <span class="on"></span>
+              <span class="on"></span>
+              <span class="on"></span>
+              <span class="on"></span>
+              <span></span>
+            </div>
+          </article>
+          <article class="skill-card">
+            <div>
+              <h3>Python tooling</h3>
+              <p>CLI utilities, reporting, and testable modules.</p>
+            </div>
+            <div class="skill-meter" aria-label="Level 4 out of 5">
+              <span class="on"></span>
+              <span class="on"></span>
+              <span class="on"></span>
+              <span class="on"></span>
+              <span></span>
+            </div>
+          </article>
+          <article class="skill-card">
+            <div>
+              <h3>Web interfaces</h3>
+              <p>Flask demos, templates, and responsive UI.</p>
+            </div>
+            <div class="skill-meter" aria-label="Level 3 out of 5">
+              <span class="on"></span>
+              <span class="on"></span>
+              <span class="on"></span>
+              <span></span>
+              <span></span>
+            </div>
+          </article>
+          <article class="skill-card">
+            <div>
+              <h3>Automation</h3>
+              <p>Log analysis, monitoring, and workflow scripting.</p>
+            </div>
+            <div class="skill-meter" aria-label="Level 4 out of 5">
+              <span class="on"></span>
+              <span class="on"></span>
+              <span class="on"></span>
+              <span class="on"></span>
+              <span></span>
+            </div>
+          </article>
+          <article class="skill-card">
+            <div>
+              <h3>Infrastructure basics</h3>
+              <p>Linux, networking, and safe testing workflows.</p>
+            </div>
+            <div class="skill-meter" aria-label="Level 3 out of 5">
+              <span class="on"></span>
+              <span class="on"></span>
+              <span class="on"></span>
+              <span></span>
+              <span></span>
+            </div>
+          </article>
+          <article class="skill-card">
+            <div>
+              <h3>Data handling</h3>
+              <p>SQLite, JSON/CSV reporting, and parsers.</p>
+            </div>
+            <div class="skill-meter" aria-label="Level 3 out of 5">
+              <span class="on"></span>
+              <span class="on"></span>
+              <span class="on"></span>
+              <span></span>
+              <span></span>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <!-- 2026 security projects -->
       <section id="projects" class="section reveal">
         <div class="section-title">
           <h2>2026 Security Projects</h2>
           <p>Projects updated or created this year with security at the core.</p>
         </div>
+        <div class="project-filter" role="group" aria-label="Project filters">
+          <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">
+            All
+          </button>
+          <button class="filter-btn" type="button" data-filter="security" aria-pressed="false">
+            Security
+          </button>
+          <button class="filter-btn" type="button" data-filter="automation" aria-pressed="false">
+            Automation
+          </button>
+          <button class="filter-btn" type="button" data-filter="web" aria-pressed="false">
+            Web
+          </button>
+          <button class="filter-btn" type="button" data-filter="tooling" aria-pressed="false">
+            Tooling
+          </button>
+        </div>
         <div class="projects-grid">
-          <article class="project-card">
+          <article class="project-card" data-categories="security tooling">
             <div class="project-header">
               <h3>KEYLOGGER_DEFENSE_TOOLS</h3>
               <span>Python</span>
@@ -180,7 +311,7 @@
               </a>
             </div>
           </article>
-          <article class="project-card">
+          <article class="project-card" data-categories="security tooling">
             <div class="project-header">
               <h3>file_integrity_monitor</h3>
               <span>Python</span>
@@ -195,7 +326,7 @@
               </a>
             </div>
           </article>
-          <article class="project-card">
+          <article class="project-card" data-categories="security tooling">
             <div class="project-header">
               <h3>Network Port Scanner</h3>
               <span>Python</span>
@@ -210,7 +341,7 @@
               </a>
             </div>
           </article>
-          <article class="project-card">
+          <article class="project-card" data-categories="security tooling web">
             <div class="project-header">
               <h3>Password Strength Checker</h3>
               <span>Python</span>
@@ -225,7 +356,7 @@
               </a>
             </div>
           </article>
-          <article class="project-card">
+          <article class="project-card" data-categories="automation web tooling">
             <div class="project-header">
               <h3>WhatsApp Calendar Agent</h3>
               <span>Python, Docker</span>
@@ -240,7 +371,7 @@
               </a>
             </div>
           </article>
-          <article class="project-card">
+          <article class="project-card" data-categories="security automation tooling">
             <div class="project-header">
               <h3>Scripting</h3>
               <span>Python</span>
@@ -253,6 +384,187 @@
               <a href="https://github.com/Evaristo88/Scripting">
                 View repository
               </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Case studies -->
+      <section id="case-studies" class="section reveal">
+        <div class="section-title">
+          <h2>Case studies</h2>
+          <p>Problem, approach, and results for key projects.</p>
+        </div>
+        <div class="case-study-grid">
+          <article class="case-study">
+            <div class="case-tag">Network Port Scanner</div>
+            <div class="case-body">
+              <div class="case-block">
+                <h3>Problem</h3>
+                <p>Need fast, repeatable visibility across hosts and ports with minimal setup.</p>
+              </div>
+              <div class="case-block">
+                <h3>Approach</h3>
+                <p>Thread pool scanner that supports ranges, CIDR, TCP or UDP, plus progress and ETA.</p>
+              </div>
+              <div class="case-block">
+                <h3>Results</h3>
+                <p>Exportable CSV or JSON reports and a local-only web UI wrapper for safer demos.</p>
+              </div>
+            </div>
+            <a class="ghost" href="https://github.com/Evaristo88/network_port_scanner">
+              View repository
+            </a>
+          </article>
+          <article class="case-study">
+            <div class="case-tag">File Integrity Monitor</div>
+            <div class="case-body">
+              <div class="case-block">
+                <h3>Problem</h3>
+                <p>Detect file tampering and changes across sensitive assets with clarity.</p>
+              </div>
+              <div class="case-block">
+                <h3>Approach</h3>
+                <p>Baseline hashing with SHA-256, scanning diffs, and optional real-time watching.</p>
+              </div>
+              <div class="case-block">
+                <h3>Results</h3>
+                <p>Clear created/modified/deleted alerts, log files, and JSON configuration control.</p>
+              </div>
+            </div>
+            <a class="ghost" href="https://github.com/Evaristo88/file_integrity_monitor">
+              View repository
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <!-- Lab notes -->
+      <section id="lab-notes" class="section reveal">
+        <div class="section-title">
+          <h2>Lab notes</h2>
+          <p>Short write-ups tied to the repositories.</p>
+        </div>
+        <div class="notes-grid">
+          <article class="note-card">
+            <h3>Password Strength Checker</h3>
+            <p>Entropy-based scoring, blacklist checks, and pattern detection with JSON output.</p>
+            <a href="https://github.com/Evaristo88/password_strength_checker">Repository</a>
+          </article>
+          <article class="note-card">
+            <h3>Keylogger Defense Tools</h3>
+            <p>Process scanning for input-device access plus a consent-based demo app.</p>
+            <a href="https://github.com/Evaristo88/KEYLOGGER_DEFENSE_TOOLS">Repository</a>
+          </article>
+          <article class="note-card">
+            <h3>Scripting Lab</h3>
+            <p>Auth-log analyzer with follow mode, blocklist output, and dry-run auto-blocking.</p>
+            <a href="https://github.com/Evaristo88/Scripting">Repository</a>
+          </article>
+          <article class="note-card">
+            <h3>WhatsApp Calendar Agent</h3>
+            <p>Flask service with Twilio webhooks, Google Calendar, and SQLite persistence.</p>
+            <a href="https://github.com/Evaristo88/Whatsapp-Calendar-Agent">Repository</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- Writing & docs -->
+      <section id="writing" class="section reveal">
+        <div class="section-title">
+          <h2>Writing & docs</h2>
+          <p>Technical references, usage guides, and deeper breakdowns.</p>
+        </div>
+        <div class="docs-grid">
+          <article class="doc-card">
+            <h3>Password Strength Checker</h3>
+            <p>Deep technical breakdown and design notes.</p>
+            <a href="https://github.com/Evaristo88/password_strength_checker/blob/master/DETAILED_DOCUMENTATION.md">
+              DETAILED_DOCUMENTATION.md
+            </a>
+          </article>
+          <article class="doc-card">
+            <h3>Network Port Scanner</h3>
+            <p>Usage reference with examples and safety guidance.</p>
+            <a href="https://github.com/Evaristo88/network_port_scanner/blob/main/docs/USAGE.md">
+              docs/USAGE.md
+            </a>
+          </article>
+          <article class="doc-card">
+            <h3>Scripting Lab</h3>
+            <p>Lab documentation and CLI reference for the scripts.</p>
+            <a href="https://github.com/Evaristo88/Scripting/blob/master/LAB_DOCUMENTATION.md">
+              LAB_DOCUMENTATION.md
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <!-- Experience timeline -->
+      <section id="experience" class="section reveal">
+        <div class="section-title">
+          <h2>Experience highlights</h2>
+          <p>Case-study style snapshots that show impact and approach.</p>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Network scanning tooling</h3>
+              <p>Built a scanner that handles ranges, CIDR blocks, and flexible port selection.</p>
+              <ul>
+                <li>Added TCP and UDP support with thread pooling</li>
+                <li>Reported progress and ETA during scans</li>
+                <li>Exported findings to CSV and JSON</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Password strength checker</h3>
+              <p>Built a CLI and web demo for password evaluation with clear, actionable feedback.</p>
+              <ul>
+                <li>Scored passwords with entropy and character variety</li>
+                <li>Flagged blacklist hits and pattern weaknesses</li>
+                <li>Provided JSON output for integrations</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>File integrity monitoring</h3>
+              <p>Built a baseline and scanning workflow with optional real-time watching.</p>
+              <ul>
+                <li>Tracked created, modified, and deleted files</li>
+                <li>Logged results to console and file</li>
+                <li>Configured scans with JSON settings</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Defensive keylogger awareness</h3>
+              <p>Built tools that inspect input-device access with a safe, consent-based demo.</p>
+              <ul>
+                <li>Flagged suspicious process patterns</li>
+                <li>Generated JSON or CSV outputs</li>
+                <li>Documented safe usage and limits</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>WhatsApp calendar agent</h3>
+              <p>Built a Flask service that schedules events through WhatsApp and Google Calendar.</p>
+              <ul>
+                <li>Integrated Twilio WhatsApp webhooks</li>
+                <li>Parsed intents with a lightweight NLP flow</li>
+                <li>Stored events with SQLite and SQLAlchemy</li>
+              </ul>
             </div>
           </article>
         </div>

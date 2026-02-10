@@ -4,7 +4,8 @@ Cybersecurity-focused portfolio for Evaristo Ndowera, showcasing penetration tes
 
 ## Highlights
 - Security-first personal site with a bold visual style
-- Sections for qualifications, projects, tooling, certifications, and contact
+- Sections for qualifications, skills, projects, case studies, lab notes, certifications, and contact
+- Interactive project filters and scroll reveal motion
 - Built with vanilla HTML, CSS, and JavaScript
 
 ## Project Links

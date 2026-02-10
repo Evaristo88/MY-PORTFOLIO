@@ -1,3 +1,4 @@
+/* Design tokens */
 :root {
   --bg: #0f1111;
   --bg-soft: #151818;
@@ -11,12 +12,14 @@
   --shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
 }
 
+/* Global reset */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Base typography and background */
 body {
   font-family: "Space Grotesk", system-ui, sans-serif;
   background: var(--bg);
@@ -24,6 +27,7 @@ body {
   line-height: 1.6;
 }
 
+/* Layered atmospheric background */
 .page-bg {
   position: fixed;
   inset: 0;
@@ -35,6 +39,7 @@ body {
   z-index: -1;
 }
 
+/* Sticky navigation bar */
 .site-header {
   position: sticky;
   top: 0;
@@ -90,6 +95,7 @@ body {
   font-weight: 600;
 }
 
+/* Main content spacing */
 main {
   padding: 40px 7vw 80px;
 }
@@ -98,6 +104,7 @@ main {
   margin: 80px 0;
 }
 
+/* Hero layout */
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
@@ -229,6 +236,7 @@ main {
   max-width: 460px;
 }
 
+/* Section grids */
 .about-grid,
 .focus-grid,
 .projects-grid,
@@ -252,6 +260,7 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
+/* Cards */
 .about-card,
 .focus-card,
 .project-card,
@@ -354,6 +363,7 @@ main {
   border-top: 1px solid var(--line);
 }
 
+/* Scroll reveal animation */
 .reveal {
   opacity: 0;
   transform: translateY(24px);

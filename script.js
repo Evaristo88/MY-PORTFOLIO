@@ -68,3 +68,27 @@ if (filterButtons.length && projectCards.length) {
     });
   });
 }
+
+// Resize TryHackMe badge to avoid scrollbars while fitting the card.
+const badgeWrap = document.querySelector(".thm-badge-wrap");
+const badgeFrame = document.querySelector(".thm-badge");
+
+const resizeBadge = () => {
+  if (!badgeWrap || !badgeFrame) {
+    return;
+  }
+
+  const baseWidth = 620;
+  const baseHeight = 200;
+  const availableWidth = badgeWrap.clientWidth || baseWidth;
+  const scale = Math.min(1.1, availableWidth / baseWidth);
+
+  badgeFrame.style.width = `${baseWidth}px`;
+  badgeFrame.style.height = `${baseHeight}px`;
+  badgeFrame.style.transform = `scale(${scale})`;
+  badgeFrame.style.transformOrigin = "top left";
+  badgeWrap.style.height = `${baseHeight * scale}px`;
+};
+
+resizeBadge();
+window.addEventListener("resize", resizeBadge);

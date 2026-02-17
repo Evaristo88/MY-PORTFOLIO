@@ -254,24 +254,6 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
-.methodology-grid {
-  display: grid;
-  gap: 18px;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-}
-
-.methodology-card {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 20px 22px;
-}
-
-.methodology-card p {
-  color: var(--muted);
-  margin-top: 8px;
-}
-
 .skill-card {
   background: var(--panel);
   border: 1px solid var(--line);
@@ -501,6 +483,23 @@ main {
   color: var(--teal);
   text-decoration: none;
   font-weight: 600;
+}
+
+.cert-card.thm-card {
+  overflow: hidden;
+}
+
+.thm-badge-wrap {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 14px;
+  background: var(--bg-soft);
+}
+
+.thm-badge {
+  display: block;
+  border: none;
+  background: transparent;
 }
 
 
